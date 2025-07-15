@@ -216,7 +216,7 @@ const ThreeJSPortfolio = () => {
       description: "A comprehensive web interface for managing database records with create, read, update, and delete functionality.",
       tech: ["React", "JavaScript", "CSS"],
       icon: <Database className="w-8 h-8" />,
-      image: "src/assets/dashboard.jpg",
+      image: "public/img/dashboard.jpg",
       liveLink: "https://admin-dashboard-gold-one-19.vercel.app/"
     },
     {
@@ -224,7 +224,7 @@ const ThreeJSPortfolio = () => {
       description: "React-based task management app with real-time updates and local storage support.",
       tech: ["React", "Tailwind CSS", "Local Storage"],
       icon: <Code className="w-8 h-8" />,
-      image: "src/assets/todo1.jpg",
+      image: "public/img/todo1.jpg",
       liveLink: "https://nanthakumar01.github.io/todo-list/"
     },
     {
@@ -232,7 +232,7 @@ const ThreeJSPortfolio = () => {
       description: "Full-featured online store with product catalog, shopping cart, and Firebase authentication.",
       tech: ["React", "Firebase", "Bootstrap"],
       icon: <Smartphone className="w-8 h-8" />,
-      image: "src/assets/ecom.jpg",
+      image: "public/img/ecom.jpg",
       liveLink: "https://e-com-nanthakumars-projects-05c19193.vercel.app/"
     }
   ];
@@ -274,7 +274,7 @@ const ThreeJSPortfolio = () => {
       date: "2025",
       description: "Basic course covering React fundamentals, hooks, state management",
       link: "https://www.hackerrank.com/certificates/57f029f593a3",
-      image: "src/assets/certificate6.jpg",
+      image: "public/img/certificate6.jpg",
       verified: true
     },
     {
@@ -283,7 +283,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Learned advanced React concepts, focusing on hooks such as useState, useEffect, and custom hooks.",
       link: "https://drive.google.com/file/d/1VECkwaNbHHOUMrQOKVucJBsrnhtCM2NX/view?usp=drive_link",
-      image: "src/assets/certificate4.jpg",
+      image: "public/img/certificate4.jpg",
       verified: true
     },
     {
@@ -292,7 +292,7 @@ const ThreeJSPortfolio = () => {
       date: "204",
       description: "300+ hours of coursework covering ES6, algorithms and functional programming.",
       link: "https://drive.google.com/file/d/1VP7f27YXM2ui725sCp7FWP6x_4kWq_N8/view?usp=drivesdk",
-      image: "src/assets/certificate3.jpg",
+      image: "public/img/certificate3.jpg",
       verified: true
     },
     {
@@ -301,7 +301,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Comprehensive training in HTML5, CSS3, Flexbox, Grid, and responsive design principles.",
       link: "https://drive.google.com/file/d/1VsaIx5qfAwt_ZCWgMi94Rccg1kpQQXoz/view?usp=drivesdk",
-      image: "src/assets/certificate2.jpg",
+      image: "public/img/certificate2.jpg",
       verified: true
     },
     {
@@ -310,7 +310,7 @@ const ThreeJSPortfolio = () => {
       date: "2025",
       description: "Specialized course covering React ecosystem and deployment strategies.",
       link: "https://drive.google.com/file/d/1FoDEKQt2JlPsPRHXMUC1R4K1PEKFz6fN/view?usp=drivesdk",
-     image: "src/assets/certificate1.jpg",
+     image: "public/img/certificate1.jpg",
       verified: true
     },
     {
@@ -319,7 +319,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Developed strong verbal and written communication with a focus on professional and team collaboration",
       link: "https://drive.google.com/file/d/1VU6-eYWLytQ2I7pMaesBp67RILtDndjI/view?usp=drivesdk",
-      image: "src/assets/certificate5.jpg",
+      image: "public/img/certificate5.jpg",
       verified: true
     }
   ];
@@ -456,7 +456,7 @@ const ThreeJSPortfolio = () => {
             <div className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-500 p-1 animate-fade-in-scale">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center backdrop-blur-sm">
                 <img 
-                  src="src/assets/img.jpg"
+                  src="public/img/img.jpg"
                   alt="Nanthakumar"
                   className="w-full h-full object-cover rounded-full"
                 />
