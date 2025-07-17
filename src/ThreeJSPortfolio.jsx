@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { ChevronDown, Github, ExternalLink, Mail, Phone, MapPin, Code, Database, Smartphone, Award, Briefcase } from 'lucide-react';
+import { ChevronDown, Github, ExternalLink, Mail, Phone, MapPin, Code, Database, Smartphone, Award, Briefcase,ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ThreeJSPortfolio = () => {
   const mountRef = useRef(null);
@@ -32,6 +32,21 @@ const ThreeJSPortfolio = () => {
     };
     typeWriter();
   }, []);
+
+  const projectScrollRef = useRef(null);
+  const certificateScrollRef = useRef(null);
+
+  const scrollLeft = (ref) => {
+    ref.current.scrollBy({ left: -300, behavior: 'smooth' });
+  };
+
+  const scrollRight = (ref) => {
+    ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+
+
+
+
 
   useEffect(() => {
   const sectionElements = sections.map((_, i) => document.getElementById(`section-${i}`));
@@ -216,7 +231,7 @@ const ThreeJSPortfolio = () => {
       description: "A comprehensive web interface for managing database records with create, read, update, and delete functionality.",
       tech: ["React", "JavaScript", "CSS"],
       icon: <Database className="w-8 h-8" />,
-      image: "/img/dashboard.jpg",
+      image: "src/assets/dashboard.jpg",
       liveLink: "https://admin-dashboard-gold-one-19.vercel.app/"
     },
     {
@@ -224,7 +239,7 @@ const ThreeJSPortfolio = () => {
       description: "React-based task management app with real-time updates and local storage support.",
       tech: ["React", "Tailwind CSS", "Local Storage"],
       icon: <Code className="w-8 h-8" />,
-      image: "/img/todo1.jpg",
+      image: "src/assets/todo1.jpg",
       liveLink: "https://nanthakumar01.github.io/todo-list/"
     },
     {
@@ -232,7 +247,15 @@ const ThreeJSPortfolio = () => {
       description: "Full-featured online store with product catalog, shopping cart, and Firebase authentication.",
       tech: ["React", "Firebase", "Bootstrap"],
       icon: <Smartphone className="w-8 h-8" />,
-      image: "/img/ecom.jpg",
+      image: "src/assets/ecom.jpg",
+      liveLink: "https://e-com-nanthakumars-projects-05c19193.vercel.app/"
+    },
+    {
+      title: "Wheather prediction",
+      description: "Full-featured online store with product catalog, shopping cart, and Firebase authentication.",
+      tech: ["React", "Firebase", "Bootstrap"],
+      icon: <Smartphone className="w-8 h-8" />,
+      image: "src/assets/ecom.jpg",
       liveLink: "https://e-com-nanthakumars-projects-05c19193.vercel.app/"
     }
   ];
@@ -274,7 +297,7 @@ const ThreeJSPortfolio = () => {
       date: "2025",
       description: "Basic course covering React fundamentals, hooks, state management",
       link: "https://www.hackerrank.com/certificates/57f029f593a3",
-      image: "/img/certificate6.jpg",
+      image: "src/assets/certificate6.jpg",
       verified: true
     },
     {
@@ -283,7 +306,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Learned advanced React concepts, focusing on hooks such as useState, useEffect, and custom hooks.",
       link: "https://drive.google.com/file/d/1VECkwaNbHHOUMrQOKVucJBsrnhtCM2NX/view?usp=drive_link",
-      image: "/img/certificate4.jpg",
+      image: "src/assets/certificate4.jpg",
       verified: true
     },
     {
@@ -292,7 +315,7 @@ const ThreeJSPortfolio = () => {
       date: "204",
       description: "300+ hours of coursework covering ES6, algorithms and functional programming.",
       link: "https://drive.google.com/file/d/1VP7f27YXM2ui725sCp7FWP6x_4kWq_N8/view?usp=drivesdk",
-      image: "/img/certificate3.jpg",
+      image: "src/assets/certificate3.jpg",
       verified: true
     },
     {
@@ -301,7 +324,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Comprehensive training in HTML5, CSS3, Flexbox, Grid, and responsive design principles.",
       link: "https://drive.google.com/file/d/1VsaIx5qfAwt_ZCWgMi94Rccg1kpQQXoz/view?usp=drivesdk",
-      image: "/img/certificate2.jpg",
+      image: "src/assets/certificate2.jpg",
       verified: true
     },
     {
@@ -310,7 +333,7 @@ const ThreeJSPortfolio = () => {
       date: "2025",
       description: "Specialized course covering React ecosystem and deployment strategies.",
       link: "https://drive.google.com/file/d/1FoDEKQt2JlPsPRHXMUC1R4K1PEKFz6fN/view?usp=drivesdk",
-     image: "/img/certificate1.jpg",
+     image: "src/assets/certificate1.jpg",
       verified: true
     },
     {
@@ -319,7 +342,7 @@ const ThreeJSPortfolio = () => {
       date: "2024",
       description: "Developed strong verbal and written communication with a focus on professional and team collaboration",
       link: "https://drive.google.com/file/d/1VU6-eYWLytQ2I7pMaesBp67RILtDndjI/view?usp=drivesdk",
-      image: "/img/certificate5.jpg",
+      image: "src/assets/certificate5.jpg",
       verified: true
     }
   ];
@@ -450,13 +473,13 @@ const ThreeJSPortfolio = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="section-0" className="min-h-screen flex items-center justify-center relative">
+      <section id="section-0" className="min-h-screen flex items-center justify-center relative ">
         <div className="text-center max-w-4xl mx-auto px-4">
           <div className="mb-8">
             <div className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-500 p-1 animate-fade-in-scale">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center backdrop-blur-sm">
                 <img 
-                  src="/img/img.jpg"
+                  src="src/assets/img.jpg"
                   alt="Nanthakumar"
                   className="w-full h-full object-cover rounded-full"
                 />
@@ -545,7 +568,7 @@ const ThreeJSPortfolio = () => {
       {/* Experience Section */}
       <section id="section-3" className="min-h-screen flex items-center py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="animated-heading text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h2 className="animated-heading text-4xl md:text-5xl font-bold leading-tight mb-16 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Experience
           </h2>
           <div className="space-y-8">
@@ -589,108 +612,89 @@ const ThreeJSPortfolio = () => {
         </div>
       </section>
 
-     {/* Certificates Section */}
-<section id="section-4" className="min-h-screen flex items-center py-20 bg-black">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="animated-heading text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-      Certificates & Achievements
-    </h2>
 
-    <div className="grid md:grid-cols-2 gap-8">
-      {certificates.map((cert, index) => (
-        <div
-          key={index}
-          className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105"
-        >
-          {/* Certificate Image */}
-          <div className="overflow-hidden">
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="w-full h-64 object-cover transition-transform duration-500 hover:scale-110"
-            />
-          </div>
+         {/* Certificates Section */}
+      <section id="section-4" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            Certificates & Achievements
+          </h2>
 
-          {/* Certificate Content */}
-          <div className="p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-white mb-2">{cert.title}</h3>
-                <p className="text-blue-400 font-medium mb-1">{cert.issuer}</p>
-                <p className="text-gray-400 text-sm">{cert.date}</p>
-              </div>
-              {cert.verified && (
-                <div className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-medium border border-green-400/30">
-                  Verified
+          <div className="relative">
+            <button onClick={() => scrollLeft(certificateScrollRef)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
+              <ChevronLeft />
+            </button>
+
+            <div ref={certificateScrollRef} className="overflow-x-auto flex gap-6 scroll-smooth pb-4">
+              {certificates.map((cert, index) => (
+                <div key={index} className="min-w-[300px] bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                  <img src={cert.image} alt={cert.title} className="w-full h-48 object-cover" />
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-white mb-1">{cert.title}</h3>
+                    <p className="text-blue-400">{cert.issuer}</p>
+                    <p className="text-gray-400 text-sm">{cert.date}</p>
+                    <p className="text-gray-300 mt-2 text-sm">{cert.description}</p>
+                    {cert.verified && (
+                      <div className="mt-2 text-green-400 text-xs bg-green-500/20 border border-green-400/30 px-2 py-1 rounded-full inline-block">Verified</div>
+                    )}
+                    <button onClick={() => window.open(cert.link, '_blank')} className="mt-3 flex items-center space-x-2 text-purple-400 hover:text-purple-300 text-sm">
+                      <ExternalLink className="w-4 h-4" />
+                      <span>View Certificate</span>
+                    </button>
+                  </div>
                 </div>
-              )}
+              ))}
             </div>
 
-            <p className="text-gray-300 mb-6 leading-relaxed">{cert.description}</p>
-
-            <button
-              onClick={() => window.open(cert.link, '_blank')}
-              className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors font-medium"
-            >
-              <ExternalLink className="w-4 h-4" />
-              <span>View Certificate</span>
+            <button onClick={() => scrollRight(certificateScrollRef)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
+              <ChevronRight />
             </button>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
+      {/* Projects Section */}
+      <section id="section-5" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold leading-snug mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+  Projects
+</h2>
 
-     {/* Projects Section */}
-<section id="section-5" className="min-h-screen flex items-center py-20">
-  <div className="max-w-6xl mx-auto px-4">
-    <h2 className="animated-heading text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-      Projects
-    </h2>
-    <div className="grid md:grid-cols-3 gap-8">
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
-        >
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-48 object-cover"
-          />
-          <div className="p-6">
-            <div className="text-blue-400 mb-4">{project.icon}</div>
-            <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-            <p className="text-gray-300 mb-4">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech, techIndex) => (
-                <span
-                  key={techIndex}
-                  className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
+          <div className="relative">
+            <button onClick={() => scrollLeft(projectScrollRef)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
+              <ChevronLeft />
+            </button>
+
+            <div ref={projectScrollRef} className="overflow-x-auto flex gap-6 scroll-smooth pb-4">
+              {projects.map((project, index) => (
+                <div key={index} className="min-w-[300px] bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                  <div className="p-4">
+                    <div className="text-blue-400 text-xl mb-1">{project.icon}</div>
+                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                    <p className="text-gray-300 text-sm my-2">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {project.tech.map((tech, techIndex) => (
+                        <span key={techIndex} className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 text-sm">
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live</span>
+                    </a>
+                  </div>
+                </div>
               ))}
             </div>
-            <div className="flex space-x-4">
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors"
-              >
-                <ExternalLink className="w-5 h-5" />
-                <span>Live</span>
-              </a>
-            </div>
+
+            <button onClick={() => scrollRight(projectScrollRef)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
+              <ChevronRight />
+            </button>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Contact Section */}
       <section id="section-6" className="min-h-screen flex items-center py-20">
@@ -712,8 +716,11 @@ const ThreeJSPortfolio = () => {
                     <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
+                    <a href='mailto:knantha631@gmail.com'>
                     <p className="text-white font-semibold">Email</p>
                     <p className="text-gray-400">knantha631@gmail.com</p>
+                    </a>
+                   
                   </div>
                 </div>
                 
@@ -722,8 +729,11 @@ const ThreeJSPortfolio = () => {
                     <Phone className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
+                    <a href='tel:+919894688541'>
                     <p className="text-white font-semibold">Phone</p>
                     <p className="text-gray-400">+91 9894688541</p>
+                    </a>
+                    
                   </div>
                 </div>
                 
