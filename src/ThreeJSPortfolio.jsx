@@ -227,8 +227,16 @@ const ThreeJSPortfolio = () => {
 
   const projects = [
     {
-      title: "CRUD Dashboard",
-      description: "A comprehensive web interface for managing database records with create, read, update, and delete functionality.",
+      title: "Interactive-Stock-Tracker-Dashboard",
+      description: "The code is a feature-rich demo of an interactive stock tracker dashboard with simulated real-time updates. It covers stock browsing, watchlist management, stock detail displays, and sophisticated chart rendering, all within efficient React state and lifecycle paradigms.",
+      tech: ["React", "chart.js","tailwind"],
+      icon: <Database className="w-8 h-8" />,
+      image: "/img/stack.jpg",
+      liveLink: "https://interactive-stock-tracker-dashboard.vercel.app/"
+    },
+    {
+      title: "Admin Dashboard",
+      description: "It’s a clean, scalable, and responsive admin dashboard frontend built entirely with React and Tailwind CSS. Designed for modern web apps, it features a polished UI with reusable components like sidebars, tables, cards, charts, and forms, making it ideal for building admin panels, dashboards, or internal tools",
       tech: ["React", "JavaScript", "CSS"],
       icon: <Database className="w-8 h-8" />,
       image: "/img/dashboard.jpg",
@@ -464,43 +472,58 @@ const ThreeJSPortfolio = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
-      <section id="section-0" className="min-h-screen flex items-center justify-center relative ">
-        <div className="text-center max-w-4xl mx-auto px-4">
-          <div className="mb-8">
-            <div className="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-500 p-1 animate-fade-in-scale">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center backdrop-blur-sm">
-                <img 
-                  src="/img/img.jpg"
-                  alt="Nanthakumar"
-                  className="w-full h-full object-cover rounded-full"
-                />
-              </div>
-            </div>
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-            {animatedText}
-            {showCursor && <span className="typewriter-cursor"></span>}
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 animate-slide-in-left">
-            Front-End Developer 
-          </p>
-          <p className="text-lg mb-12 text-gray-400 max-w-2xl mx-auto animate-slide-in-right">
-            I specialize in creating beautiful and intuitive web designs using modern technologies like React, JavaScript, and CSS. 
-            Passionate about crafting engaging user experiences.
-          </p>
-          <a
-                href="https://drive.google.com/file/d/1Fr7qvOK8u8ZAD8GZOcywVNeGB6endhoK/view?usp=drivesdk" 
-                target='_blank'
-                download
-                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3 rounded-full text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-float">
-                  Download CV
-        </a>
+      {/* Hero / Home Section*/}
+<section id="section-0" className="min-h-screen flex items-center justify-center relative">
+  <div className="text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    {/* Profile Picture */}
+    <div className="mb-6 sm:mb-8">
+      <div className="w-64 h-64 xs:w-28 sm:w-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto rounded-full overflow-hidden border-4 border-gradient-to-r from-blue-400 to-purple-500 p-1 animate-fade-in-scale">
+        <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center backdrop-blur-sm">
+          <img 
+            src="/img/img.jpg"
+            alt="Nanthakumar"
+            className="w-full h-full object-cover rounded-full"
+          />
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
-          <ChevronDown className="w-8 h-8 text-white/50" />
-        </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Animated Name */}
+    <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-5 sm:mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+      {animatedText}
+      {showCursor && <span className="typewriter-cursor"></span>}
+    </h1>
+
+    {/* Role */}
+    <p className="text-base sm:text-xl md:text-2xl mb-4 text-gray-300 animate-slide-in-left">
+      Front-End Developer 
+    </p>
+
+    {/* Description */}
+    <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-10 text-gray-400 max-w-xl mx-auto animate-slide-in-right">
+      I specialize in creating beautiful and intuitive web designs using modern technologies like React, JavaScript, and CSS. 
+      Passionate about crafting engaging user experiences.
+    </p>
+
+    {/* CV Download Button */}
+    <a
+      href="https://drive.google.com/file/d/1Fr7qvOK8u8ZAD8GZOcywVNeGB6endhoK/view?usp=drivesdk" 
+      target="_blank"
+      rel="noreferrer"
+      download
+      className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-2 sm:px-8 sm:py-3 rounded-full text-sm sm:text-base text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 animate-float"
+    >
+      Download CV
+    </a>
+  </div>
+
+  {/* Chevron Down */}
+  <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+    <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-white/50" />
+  </div>
+</section>
+
 
       {/* About Section */}
       <section id="section-1" className="min-h-screen flex items-center py-20">
@@ -613,9 +636,14 @@ const ThreeJSPortfolio = () => {
           </h2>
 
           <div className="relative">
-            <button onClick={() => scrollLeft(certificateScrollRef)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
-              <ChevronLeft />
-            </button>
+            <button
+  aria-label="Scroll Left"
+  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-blue-500/20 rounded-full p-3 shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  onClick={() => scrollLeft(ref)}
+  tabIndex={0}
+>
+  <ChevronLeft className="w-7 h-7 text-white" />
+</button>
 
             <div ref={certificateScrollRef} className="overflow-x-auto flex gap-6 scroll-smooth pb-4">
               {certificates.map((cert, index) => (
@@ -638,9 +666,14 @@ const ThreeJSPortfolio = () => {
               ))}
             </div>
 
-            <button onClick={() => scrollRight(certificateScrollRef)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
-              <ChevronRight />
-            </button>
+            <button
+  aria-label="Scroll Right"
+  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-blue-500/20 rounded-full p-3 shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  onClick={() => scrollRight(ref)}
+  tabIndex={0}
+>
+  <ChevronRight className="w-7 h-7 text-white" />
+</button>
           </div>
         </div>
       </section>
@@ -653,9 +686,14 @@ const ThreeJSPortfolio = () => {
 </h2>
 
           <div className="relative">
-            <button onClick={() => scrollLeft(projectScrollRef)} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
-              <ChevronLeft />
-            </button>
+           <button
+  aria-label="Scroll Left"
+  className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-blue-500/20 rounded-full p-3 shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  onClick={() => scrollLeft(ref)}
+  tabIndex={0}
+>
+  <ChevronLeft className="w-7 h-7 text-white" />
+</button>
 
             <div ref={projectScrollRef} className="overflow-x-auto flex gap-6 scroll-smooth pb-4">
               {projects.map((project, index) => (
@@ -681,9 +719,14 @@ const ThreeJSPortfolio = () => {
               ))}
             </div>
 
-            <button onClick={() => scrollRight(projectScrollRef)} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 p-2 rounded-full hover:bg-white/20">
-              <ChevronRight />
-            </button>
+            <button
+  aria-label="Scroll Right"
+  className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-blue-500/20 rounded-full p-3 shadow-md transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+  onClick={() => scrollRight(ref)}
+  tabIndex={0}
+>
+  <ChevronRight className="w-7 h-7 text-white" />
+</button>
           </div>
         </div>
       </section>
